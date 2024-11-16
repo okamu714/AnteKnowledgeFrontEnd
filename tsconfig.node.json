@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./.tmp/tsconfig.node.tsbuildinfo", // 修正: キャッシュファイルの保存場所
+    "target": "ES2022", // 保守的にES2022に変更（必要なら元に戻せます）
+    "lib": ["ES2022"], // ランタイム互換性を考慮してES2022
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "incremental": true, // 追加: キャッシュビルドを有効化
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+   
+  },
+  "include": ["vite.config.ts"]
+}
