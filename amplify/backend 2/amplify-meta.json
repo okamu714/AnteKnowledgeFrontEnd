@@ -1,0 +1,58 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-anteknowledge-dev-174a6-authRole",
+      "UnauthRoleArn": "arn:aws:iam::423623824342:role/amplify-anteknowledge-dev-174a6-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::423623824342:role/amplify-anteknowledge-dev-174a6-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-anteknowledge-dev-174a6-deployment",
+      "UnauthRoleName": "amplify-anteknowledge-dev-174a6-unauthRole",
+      "StackName": "amplify-anteknowledge-dev-174a6",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:423623824342:stack/amplify-anteknowledge-dev-174a6/52aa2230-a4a7-11ef-ad27-0a8338596adb",
+      "AmplifyAppId": "dt7is27lyqlaz"
+    }
+  },
+  "auth": {
+    "anteknowledge843b0fd0": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-anteknowledge-dev-174a6-deployment/amplify-cfn-templates/auth/anteknowledge843b0fd0-cloudformation-template.json",
+        "logicalId": "authanteknowledge843b0fd0"
+      },
+      "lastPushTimeStamp": "2024-11-17T05:54:44.518Z",
+      "output": {
+        "UserPoolId": "ap-northeast-1_0qwDbBEFp",
+        "AppClientIDWeb": "75110a61putrv7lojj8qbrd9hv",
+        "AppClientID": "5m8cis3oa04t7n6bclf4ru2222",
+        "IdentityPoolId": "ap-northeast-1:9fc42881-448d-408a-b7bb-c9bb8f870773",
+        "UserPoolArn": "arn:aws:cognito-idp:ap-northeast-1:423623824342:userpool/ap-northeast-1_0qwDbBEFp",
+        "IdentityPoolName": "anteknowledge843b0fd0_identitypool_843b0fd0__dev",
+        "UserPoolName": "anteknowledge843b0fd0_userpool_843b0fd0"
+      },
+      "lastPushDirHash": "pOtjMJ3pZdqj9kp/Iq1CNurrgJw="
+    }
+  }
+}
