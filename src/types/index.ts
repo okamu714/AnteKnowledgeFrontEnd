@@ -1,4 +1,3 @@
-
 // User型定義
 export type User = {
   id: number;
@@ -6,6 +5,17 @@ export type User = {
   email: string;
   created_at: string;
   updated_at: string;
+};
+
+// 電子記事の型定義
+export type Book = {
+  id: string;
+  title: string;
+  thumbnail?: { url: string }; // サムネイルはオプション
+  content: string;
+  price: number;
+  createAt: string;
+  updatedAt: string;
 };
 
 //Amplifyの認証機能用の型

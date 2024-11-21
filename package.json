@@ -13,12 +13,19 @@
     "@aws-amplify/core": "^6.5.3",
     "@aws-amplify/ui": "^6.6.5",
     "@aws-amplify/ui-react": "^6.5.5",
+    "@stripe/react-stripe-js": "^2.9.0",
+    "@stripe/stripe-js": "^4.10.0",
     "aws-amplify": "^6.8.2",
+    "microcms-js-sdk": "^3.1.2",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "stripe": "^17.3.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.0",
     "@eslint/js": "^9.13.0",
+    "@types/node": "^22.9.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.3",
