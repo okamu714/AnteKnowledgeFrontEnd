@@ -6,8 +6,7 @@ import Navber from './components/Navber';
 import Home from './components/Home';
 import Blog from './components/Blog';
 import IntroCodes from './components/IntroCodes';
-import CheckoutForm from './components/CheckoutForm';
-import CompletePage from './components/CompletePage';
+
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import { StripeElementsOptions } from '@stripe/stripe-js';
