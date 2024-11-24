@@ -25,4 +25,6 @@ export interface AuthWrapperProps {
     username: string;
   };
   children?: React.ReactNode;
+
+  // setAuth: React.Dispatch<React.SetStateAction<boolean>>;
 }

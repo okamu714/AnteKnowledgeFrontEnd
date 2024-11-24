@@ -1,7 +1,24 @@
 import React from 'react';
+import Footer from './Footer';
 
 const IntroCodes = () => {
-  return <div className="mt-28">IntroCodes</div>;
+  return (
+    <>
+      <div
+        id="wrapper"
+        className="w-screen h-fit bg-gradient-to-bl from-slate-800 via-gray-600 to-neutral-400 pt-48 pb-10"
+      >
+        <div className="flex justify-center mx-auto -mt-10 py-96 max-w-screen-xl h-fit border-black border-4 rounded bg-white">
+          <div className="flex justify-center text-black">
+            <div className="mt-40 grid grid-cols-1 gap-4">
+              <span>コード紹介</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
 };
 
 export default IntroCodes;

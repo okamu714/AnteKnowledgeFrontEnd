@@ -1,14 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 const Navber = () => {
-  return (
-    // <nav>
-    //   <Link to="/">
-    //     <span>home</span>
-    //   </Link>
-    // </nav>
+  const { isAuthenticated, user, setUser } = useAuth();
 
+  return (
     <nav className="sticky top-4 z-50 w-11/12 mx-auto -mt-24 flex items-center justify-between px-4 py-2  backdrop-blur-md text-white bg-neutral-500 bg-opacity-60 shadow-xl rounded-lg ">
       {/* 左の要素 */}
       <div className="relative top-2 left-4 p-4 w-[170px] h-[50px]" id="left">
@@ -56,14 +53,26 @@ const Navber = () => {
           introCodes
           <span className="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-white"></span>
         </Link>
-        <Link
-          to="/authentication"
-          id="introCodes"
-          className="relative flex justify-center items-center bg-neutral-700 text-neutral-100 font-semibold px-6 py-2 rounded-md overflow-hidden group hover:scale-110 transition-all duration-300"
-        >
-          <span className="absolute inset-0 bg-neutral-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out"></span>
-          <span className="relative z-10">Login</span>
-        </Link>
+
+        {isAuthenticated ? (
+          <Link
+            to="/mypage"
+            id="mypage"
+            className="relative flex justify-center items-center bg-neutral-700 text-neutral-100 font-semibold px-6 py-2 rounded-md overflow-hidden group hover:scale-110 transition-all duration-300"
+          >
+            <span className="absolute inset-0 bg-neutral-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out"></span>
+            <span className="relative z-10">MyPage</span>
+          </Link>
+        ) : (
+          <Link
+            to="/login"
+            id="Auth"
+            className="relative flex justify-center items-center bg-neutral-700 text-neutral-100 font-semibold px-6 py-2 rounded-md overflow-hidden group hover:scale-110 transition-all duration-300"
+          >
+            <span className="absolute inset-0 bg-neutral-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out"></span>
+            <span className="relative z-10">Login</span>
+          </Link>
+        )}
       </div>
     </nav>
   );
