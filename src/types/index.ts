@@ -8,7 +8,7 @@ export type User = {
 };
 
 // 電子記事の型定義
-export type Book = {
+export type Books = {
   id: string;
   title: string;
   thumbnail?: { url: string }; // サムネイルはオプション
@@ -27,4 +27,18 @@ export interface AuthWrapperProps {
   children?: React.ReactNode;
 
   // setAuth: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export interface UserInfo {
+  email: string;
+  user_id: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface PurchaseHistory {
+  id: string;
+  product_id: string;
+  product_name: string;
+  purchased_at: string;
 }

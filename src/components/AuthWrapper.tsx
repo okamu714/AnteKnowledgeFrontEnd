@@ -70,6 +70,8 @@ const AuthWrapper: React.FC<Props> = () => {
       };
 
       sendUserInfoToBackend();
+
+      navigate('/mypage');
     }
   }, [route, user, setUser]);
 

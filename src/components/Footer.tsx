@@ -2,16 +2,16 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div>
-      <div className="relative w-screen bg-gray-900">
+    <div className="">
+      <div className="w-screen bg-gray-900 py-10 ">
         {/* 文字を前面に配置 */}
-        <h1 className="flex flex-col items-center pt-24  font-genkaku text-gray-800 text-6xl font-bold leading-relaxed opacity-75 py-10">
-          <span>
-            フッター
-            <span className="block mt-2 h-0.5 bg-gray-800 w-full"></span>
-          </span>
-          {/* 他のテキストを追加する場合は、ここに追加 */}
-        </h1>
+        <img
+          className="m-auto max-w-[200px] h-fit mb-6"
+          src="./../../pic/Logos/White_bgnone.png"
+        />
+        <p className="text-center text-sm text-gray-300 ">
+          Copyright © 2024 AnteKnowledge. All rights reserved.
+        </p>
       </div>
     </div>
   );

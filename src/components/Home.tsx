@@ -1,6 +1,7 @@
 import React from 'react';
 import Navber from './Navber';
 import './Home.css';
+import ScrollHint from './ScrollHint'; // インポート
 import Footer from './Footer';
 
 const Home = () => {
@@ -87,6 +88,9 @@ const Home = () => {
             {/* 他のテキストを追加する場合は、ここに追加 */}
           </h1>
         </div>
+
+        {/* Scroll Hint */}
+        <ScrollHint scrollTarget="about" />
 
         {/* footerエリア */}
         <Footer />

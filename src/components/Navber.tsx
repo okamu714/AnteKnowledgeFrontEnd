@@ -34,7 +34,7 @@ const Navber = () => {
           id="Blog"
           className="group transition-all duration-300 hover:text-2xl text-white  font-semibold text-lg"
         >
-          Blog
+          ブログ
           <span className="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-white"></span>
         </Link>
         <Link
@@ -42,7 +42,7 @@ const Navber = () => {
           id="eBooks"
           className="group transition-all duration-300 hover:text-2xl text-white  font-semibold text-lg"
         >
-          eBooks
+          電子記事
           <span className="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-white"></span>
         </Link>
         <Link
@@ -50,7 +50,7 @@ const Navber = () => {
           id="introCodes"
           className="group transition-all duration-300 hover:text-2xl text-white  font-semibold text-lg"
         >
-          introCodes
+          コード紹介
           <span className="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-white"></span>
         </Link>
 
@@ -61,7 +61,7 @@ const Navber = () => {
             className="relative flex justify-center items-center bg-neutral-700 text-neutral-100 font-semibold px-6 py-2 rounded-md overflow-hidden group hover:scale-110 transition-all duration-300"
           >
             <span className="absolute inset-0 bg-neutral-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out"></span>
-            <span className="relative z-10">MyPage</span>
+            <span className="relative z-10">マイページ</span>
           </Link>
         ) : (
           <Link
@@ -70,7 +70,7 @@ const Navber = () => {
             className="relative flex justify-center items-center bg-neutral-700 text-neutral-100 font-semibold px-6 py-2 rounded-md overflow-hidden group hover:scale-110 transition-all duration-300"
           >
             <span className="absolute inset-0 bg-neutral-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out"></span>
-            <span className="relative z-10">Login</span>
+            <span className="relative z-10">ログイン</span>
           </Link>
         )}
       </div>

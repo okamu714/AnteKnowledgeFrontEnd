@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AuthWrapper from './components/AuthWrapper';
 import { User } from './types/'; // 型をインポート
-import Books from './components/Books';
+import EBooks from './components/EBooks';
 import Navber from './components/Navber';
 import Home from './components/Home';
 import Blog from './components/Blog';
@@ -19,6 +19,9 @@ import {
 import MyPage from './components/MyPage';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { Authenticator, useAuthenticator } from '@aws-amplify/ui-react';
+import PurchaseSuccess from './components/PurchaseSuccess';
+import ProductDetail from './components/ProductDetail';
+import Template from './components/Template';
 
 const stripePromise = loadStripe(
   'pk_test_51QMsOaK9yUy0vysUKbnXwqTPQNnneX80rFejx2w01CdzJHx4qEmJ9KQd5opywl3fSYwtXSsKcSoPZdYj274xXB1V00RJQ628zc'
@@ -132,14 +135,17 @@ const App: React.FC = () => {
           <Navber />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/template" element={<Template />} />
             <Route path="/login" element={<AuthWrapper />} />
             <Route
               path="/mypage"
               element={<ProtectedRoute component={MyPage} />}
             />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/ebook" element={<Books />} />
+            <Route path="/ebook" element={<EBooks />} />
             <Route path="/introCodes" element={<IntroCodes />} />
+            <Route path="/succes" element={<PurchaseSuccess />} />
+            <Route path="/ebook/:productId" element={<ProductDetail />} />
             {/* 不明なパスはホームにリダイレクト */}
             {/* <Route path="*" element={<Navigate to="/" />} /> */}
           </Routes>
