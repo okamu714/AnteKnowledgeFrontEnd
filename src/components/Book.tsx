@@ -88,7 +88,7 @@ const Book: React.FC<BookProps> = ({ book, isPurchased }) => {
         </div>
 
         {/* タイトル */}
-        <div className="px-5 pb-5">
+        <div className="px-5 pb-5 border-t border-gray-500">
           <a href="#">
             <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
               {book.title}

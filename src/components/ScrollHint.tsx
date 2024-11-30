@@ -57,13 +57,13 @@ const ScrollHint: React.FC<ScrollHintProps> = ({ scrollTarget }) => {
           className="fixed bottom-10 left-10 flex flex-col items-center cursor-pointer group"
           onClick={handleScroll}
         >
-          <span className="text-gray-500 text-lg group-hover:text-gray-700 transition duration-300">
+          <span className="text-gray-400 text-lg group-hover:text-gray-300 transition duration-300">
             Scroll
           </span>
           <div className="animate-bounce mt-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-gray-500 group-hover:text-gray-700 transition duration-300"
+              className="h-6 w-6 text-gray-400 group-hover:text-gray-300 transition duration-300"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Footer from './Footer';
 import { useAuth } from '../context/AuthContext';
+import Loading from './Loading';
 
 interface UserInfo {
   email: string;
@@ -102,11 +103,18 @@ const PurchaseSuccess = () => {
         <div className="mx-auto -mt-10  max-w-screen-xl h-fit border-black border-4 rounded bg-white">
           <div className="flex items-center justify-center my-10">
             <div className="p-6 rounded-lg ">
-              <h1 className="text-2xl font-bold text-center text-gray-800 mb-4">
-                購入ありがとうございます！
+              <h1 className="text-2xl font-bold text-center text-gray-800 mb-4 border-x-2 border-gray-600 w-[600px] m-auto">
+                ご購入いただき、ありがとうございます！
               </h1>
+              {metadata ? (
+                <div className="my-4 text-center font-genkaku text-xl">
+                  <p>商品名: {metadata.product_name}</p>
+                </div>
+              ) : (
+                <Loading />
+              )}
               <p className="text-center text-gray-600">
-                ご購入いただいた内容の詳細は、登録されたメールアドレスに送信されます。
+                購入した記事は下の文字をクリックまたはマイページでご覧いただけます！
               </p>
               <div className="mt-6 text-center">
                 <Link
@@ -116,16 +124,6 @@ const PurchaseSuccess = () => {
                   購入した記事を読む
                 </Link>
               </div>
-              {metadata ? (
-                <div className="mt-4">
-                  <p>product_id: {metadata.product_id}</p>
-                  <p>product_name: {metadata.product_name}</p>
-                  <p>User_Id: {metadata.userId}</p>
-                  <p>message: {message}</p>
-                </div>
-              ) : (
-                <div>読込</div>
-              )}
             </div>
           </div>
         </div>

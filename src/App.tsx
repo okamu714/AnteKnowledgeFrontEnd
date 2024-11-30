@@ -22,6 +22,9 @@ import { Authenticator, useAuthenticator } from '@aws-amplify/ui-react';
 import PurchaseSuccess from './components/PurchaseSuccess';
 import ProductDetail from './components/ProductDetail';
 import Template from './components/Template';
+import ScrollToTop from './components/ScrollTop';
+import BlogDetail from './components/BlogDetail';
+import Contact from './components/Contact';
 
 const stripePromise = loadStripe(
   'pk_test_51QMsOaK9yUy0vysUKbnXwqTPQNnneX80rFejx2w01CdzJHx4qEmJ9KQd5opywl3fSYwtXSsKcSoPZdYj274xXB1V00RJQ628zc'
@@ -133,6 +136,7 @@ const App: React.FC = () => {
       <Authenticator.Provider>
         <Router>
           <Navber />
+          <ScrollToTop /> {/* ScrollToTopをRoutesの前に配置 */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/template" element={<Template />} />
@@ -145,7 +149,10 @@ const App: React.FC = () => {
             <Route path="/ebook" element={<EBooks />} />
             <Route path="/introCodes" element={<IntroCodes />} />
             <Route path="/succes" element={<PurchaseSuccess />} />
+            <Route path="/cancel" element={<EBooks />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/ebook/:productId" element={<ProductDetail />} />
+            <Route path="/blog/:productId" element={<BlogDetail />} />
             {/* 不明なパスはホームにリダイレクト */}
             {/* <Route path="*" element={<Navigate to="/" />} /> */}
           </Routes>

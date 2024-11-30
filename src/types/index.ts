@@ -18,6 +18,17 @@ export type Books = {
   updatedAt: string;
 };
 
+// ブログの型定義
+export type Blogs = {
+  id: string;
+  title: string;
+  content: string;
+  eyecatch?: { url: string }; // サムネイルはオプション
+  category: string;
+  createAt: string;
+  updatedAt: string;
+};
+
 //Amplifyの認証機能用の型
 export interface AuthWrapperProps {
   signOut?: () => void; // オプショナル

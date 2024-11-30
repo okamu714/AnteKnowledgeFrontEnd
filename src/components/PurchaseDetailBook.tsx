@@ -17,12 +17,12 @@ const PurchaseDetailBook: React.FC<PurchaseDetailBookProps> = ({ product }) => {
         {/* カード一枚の設定 */}
         <div
           key={product.id}
-          className="group transition duration-125 hover:shadow-2xl hover:scale-105 checked:scale-105 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-[300px]"
+          className="group min-h-[300px] max-h-[300px] transition duration-125 hover:shadow-2xl hover:scale-105 checked:scale-105 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
         >
           {/* 画像 */}
-          <div className="h-52">
+          <div className="">
             <img
-              className="p-1 rounded-t-lg object-contain m-auto"
+              className="p-1 rounded-t-lg  max-h-[200px] min-h-[200px] object-scale-down m-auto"
               src={product.thumbnail?.url}
               alt="product image"
             />
