@@ -1,10 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+// main.tsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { Amplify } from 'aws-amplify';
+import awsExports from './aws-exports';
+import { loadStripe } from '@stripe/stripe-js';
+import App from './App';
+import './index.css';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+Amplify.configure(awsExports);
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
     <App />
-  </StrictMode>,
-)
+  </React.StrictMode>
+);

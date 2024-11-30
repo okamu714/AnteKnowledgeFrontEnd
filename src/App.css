@@ -1,0 +1,29 @@
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+#payment-form {
+  max-width: 500px;
+  margin: auto;
+}
+
+button {
+  background-color: #5469d4;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#payment-message {
+  margin-top: 20px;
+  color: red;
+}
