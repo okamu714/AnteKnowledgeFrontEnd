@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-anteknowledge-dev-97fcb-authRole",
+      "UnauthRoleArn": "arn:aws:iam::423623824342:role/amplify-anteknowledge-dev-97fcb-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::423623824342:role/amplify-anteknowledge-dev-97fcb-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-anteknowledge-dev-97fcb-deployment",
+      "UnauthRoleName": "amplify-anteknowledge-dev-97fcb-unauthRole",
+      "StackName": "amplify-anteknowledge-dev-97fcb",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:423623824342:stack/amplify-anteknowledge-dev-97fcb/481fcd50-a499-11ef-8b24-0e80c9521165",
+      "AmplifyAppId": "d2isp4mbmf49f3"
+    },
+    "categories": {
+      "auth": {
+        "anteknowledgeba3912ab": {}
+      }
+    }
+  }
+}
