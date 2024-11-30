@@ -1,7 +1,7 @@
 import { createClient } from 'microcms-js-sdk';
 
 const serviceDomain = import.meta.env.VITE_SERVICE_DOMAIN;
-const serviceBlogDomain = import.meta.env.VITE_BLOG_SERVICE_DOMAIN;
+// const serviceBlogDomain = import.meta.env.VITE_BLOG_SERVICE_DOMAIN;
 const apiKey = import.meta.env.VITE_API_KEY;
 
 export const client = createClient({
@@ -21,10 +21,10 @@ export const getAllBooks = async () => {
   }
 };
 
-export const blogClient = createClient({
-  serviceDomain: serviceBlogDomain,
-  apiKey: apiKey,
-});
+// export const blogClient = createClient({
+//   serviceDomain: serviceBlogDomain,
+//   apiKey: apiKey,
+// });
 
 export const getAllBlogs = async () => {
   try {
