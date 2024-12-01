@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-akfronend-dev-f3864-authRole",
+      "UnauthRoleArn": "arn:aws:iam::423623824342:role/amplify-akfronend-dev-f3864-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::423623824342:role/amplify-akfronend-dev-f3864-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-akfronend-dev-f3864-deployment",
+      "UnauthRoleName": "amplify-akfronend-dev-f3864-unauthRole",
+      "StackName": "amplify-akfronend-dev-f3864",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:423623824342:stack/amplify-akfronend-dev-f3864/8949b400-afcd-11ef-b870-0e42415ba0f5",
+      "AmplifyAppId": "d2l737o8h4bm2m"
+    }
+  }
+}
