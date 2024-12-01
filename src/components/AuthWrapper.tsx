@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Amplify } from 'aws-amplify';
 import { I18n } from '@aws-amplify/core';
 import {
-  Authenticator,
   translations,
   useAuthenticator,
   withAuthenticator,
@@ -11,10 +10,8 @@ import {
 import '@aws-amplify/ui-react/styles.css';
 import awsExports from '../aws-exports';
 import { AuthWrapperProps } from '../types/index';
-import Navber from './Navber';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import Home from './Home';
 import MyPage from './MyPage';
 
 Amplify.configure(awsExports);
