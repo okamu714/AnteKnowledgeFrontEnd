@@ -1,7 +1,4 @@
-import React from 'react';
-import Navber from './Navber';
-import './Home.css';
-import ScrollHint from './ScrollHint'; // インポート
+import ScrollHint from './ScrollHint';
 import Footer from './Footer';
 import ImageSwitcher from './ImageSwitcher/ImageSwitcher';
 import { Link } from 'react-router-dom';

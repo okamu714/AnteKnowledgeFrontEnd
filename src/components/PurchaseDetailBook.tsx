@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Books } from '../types';
-import CheckoutButton from './CheckoutButton';
-import { useAuth } from '../context/AuthContext';
+
 import { Link } from 'react-router-dom';
 
 type PurchaseDetailBookProps = {

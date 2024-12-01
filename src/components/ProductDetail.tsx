@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import Footer from './Footer';
 import Imgix from 'react-imgix';
 import { createClient } from 'microcms-js-sdk';
@@ -24,7 +24,6 @@ const ProductDetail = () => {
   const { user } = useAuth(); // ログインユーザー情報を取得
   const [purchaseProductIds, setPurchaseProductIds] = useState<string[]>([]);
   const [loading, setLoading] = useState(true); // 全体のローディング状態を管理
-  const navigate = useNavigate();
 
   // ログインしていない場合
   useEffect(() => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useAuthenticator } from '@aws-amplify/ui-react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Footer from './Footer';
 import { Books, PurchaseHistory, UserInfo } from '../types';
 import Loading from './Loading';
@@ -21,7 +21,7 @@ const backend =
 
 const MyPage: React.FC = () => {
   const navigate = useNavigate();
-  const { isAuthenticated, user, setUser } = useAuth();
+  const { user, setUser } = useAuth();
   const { signOut } = useAuthenticator();
   const [showToast, setShowToast] = useState(false);
   const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
@@ -30,6 +30,8 @@ const MyPage: React.FC = () => {
   >(null); // 初期値をnullに設定
   const [products, setProducts] = useState<Books[] | null>(null); // 初期値をnullに設定
   const [loading, setLoading] = useState(true); // 全体のローディング状態を管理
+
+  console.log(purchaseHistories);
 
   // サインアウトの動き
   const handleSignOut = () => {

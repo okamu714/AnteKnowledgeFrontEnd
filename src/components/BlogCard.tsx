@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { Blogs, Books } from '../types';
+import { Blogs } from '../types';
 import { Link } from 'react-router-dom';
 // import CheckoutButton from './CheckoutButton';
 // import { useAuth } from '../context/AuthContext';
@@ -8,18 +7,8 @@ type BlogProps = {
   blog: Blogs; // Books型の定義があることを前提
 };
 
-interface UserInfo {
-  email: string;
-  user_id: string;
-  created_at: string;
-  updated_at: string;
-}
-
 const BlogCard: React.FC<BlogProps> = ({ blog }) => {
   // const { isAuthenticated, user, setUser } = useAuth();
-  const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
-
-  const [showModal, setShowModal] = useState(false);
 
   return (
     <>

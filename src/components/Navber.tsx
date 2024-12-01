@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const Navber = () => {
-  const { isAuthenticated, user, setUser } = useAuth();
+  const { isAuthenticated } = useAuth();
 
   return (
     <nav className="sticky top-4 z-50 w-11/12 mx-auto -mt-24 flex items-center justify-between px-4 py-2  backdrop-blur-md text-white bg-neutral-500 bg-opacity-60 shadow-xl rounded-lg ">

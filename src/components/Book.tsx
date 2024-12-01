@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Books } from '../types';
 import CheckoutButton from './CheckoutButton';
 import { useAuth } from '../context/AuthContext';
@@ -15,8 +15,11 @@ interface UserInfo {
   updated_at: string;
 }
 
+const backend =
+  import.meta.env.VITE_PUBLIC_API_URL || process.env.REACT_PUBLIC_API_URL;
+
 const Book: React.FC<BookProps> = ({ book, isPurchased }) => {
-  const { isAuthenticated, user, setUser } = useAuth();
+  const { user } = useAuth();
   const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
 
   const [showModal, setShowModal] = useState(false);
@@ -45,7 +48,7 @@ const Book: React.FC<BookProps> = ({ book, isPurchased }) => {
 
       try {
         const response = await fetch(
-          `http://localhost:3000/user_infos/${user.userId}`, // `user.userId`でCognitoのsubを使用
+          `${backend}user_infos/${user.userId}`, // `user.userId`でCognitoのsubを使用
           {
             method: 'GET',
             headers: {

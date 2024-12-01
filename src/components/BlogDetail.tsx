@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
 import { client } from '../libs/microCMS/client';
 import Loading from './Loading';
-import Imgix from 'react-imgix';
 import Footer from './Footer';
 
 const BlogDetail = () => {
   const { productId } = useParams<string>();
   const [blog, setBlog] = useState<any>(null);
-  const { user } = useAuth(); // ログインユーザー情報を取得
-  const [purchaseProductIds, setPurchaseProductIds] = useState<string[]>([]);
+
   const [loading, setLoading] = useState(true); // 全体のローディング状態を管理
 
   // 記事をmicroCMSから取得

@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { getAllBooks } from '../libs/microCMS/client';
 import { Books, PurchaseHistory } from '../types';
-import { title } from 'process';
 import Footer from './Footer';
-import CheckoutButton from './CheckoutButton';
 import Book from './Book';
 import { useAuth } from '../context/AuthContext';
 import Loading from './Loading';
 
+const backend =
+  import.meta.env.VITE_PUBLIC_API_URL || process.env.REACT_PUBLIC_API_URL;
+
 const EBooks: React.FC = () => {
-  const { isAuthenticated, user, setUser } = useAuth();
+  const { user } = useAuth();
   const [purchaseProductIds, setPurchaseProductIds] = useState<
     PurchaseHistory[]
   >([]);
@@ -36,7 +37,7 @@ const EBooks: React.FC = () => {
 
       try {
         const response = await fetch(
-          `http://localhost:3000/user_purchase_histories?user_id=${user.userId}`,
+          `${backend}user_purchase_histories?user_id=${user.userId}`,
           {
             method: 'GET',
             headers: {

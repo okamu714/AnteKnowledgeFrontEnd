@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Footer from './Footer';
 import { getAllBlogs } from '../libs/microCMS/client';
 import { Blogs } from '../types';

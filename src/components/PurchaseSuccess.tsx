@@ -1,15 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Footer from './Footer';
-import { useAuth } from '../context/AuthContext';
-import Loading from './Loading';
 
-interface UserInfo {
-  email: string;
-  user_id: string;
-  created_at: string;
-  updated_at: string;
-}
+import Loading from './Loading';
 
 interface Metadata {
   product_id: string;
@@ -25,6 +18,8 @@ const PurchaseSuccess = () => {
   const [metadata, setMetadata] = useState<Metadata | null>(null);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+
+  console.log(message, error);
 
   // stripeのメタデータを取得
   useEffect(() => {
