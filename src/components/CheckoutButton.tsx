@@ -1,7 +1,11 @@
 import React from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
+const stripePromise = loadStripe(
+  import.meta.env.VITE_STRIPE_PUBLIC_KEY || process.env.REACT_STRIPE_PUBLIC_KEY
+);
+const backend =
+  import.meta.env.VITE_PUBLIC_API_URL || process.env.REACT_PUBLIC_API_URL;
 
 const CheckoutButton: React.FC<{
   product_id: string;
@@ -13,19 +17,16 @@ const CheckoutButton: React.FC<{
     const stripe = await stripePromise;
 
     try {
-      const response = await fetch(
-        'http://localhost:3000/create-checkout-session',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            product_id: product_id,
-            product_name: product_name,
-            price: price,
-            userId: userId,
-          }),
-        }
-      );
+      const response = await fetch(`${backend}create-checkout-session`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          product_id: product_id,
+          product_name: product_name,
+          price: price,
+          userId: userId,
+        }),
+      });
 
       if (!response.ok) {
         const errorData = await response.json();

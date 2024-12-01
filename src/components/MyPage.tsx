@@ -8,10 +8,16 @@ import Loading from './Loading';
 import { createClient } from 'microcms-js-sdk';
 import PurchaseDetailBook from './PurchaseDetailBook';
 
+const serviceDomain =
+  import.meta.env.VITE_SERVICE_DOMAIN || process.env.REACT_SERVICE_DOMAIN;
+const apiKey = import.meta.env.VITE_API_KEY || process.env.REACT_API_KEY;
+
 const client = createClient({
-  serviceDomain: import.meta.env.VITE_SERVICE_DOMAIN,
-  apiKey: import.meta.env.VITE_API_KEY,
+  serviceDomain: serviceDomain,
+  apiKey: apiKey,
 });
+const backend =
+  import.meta.env.VITE_PUBLIC_API_URL || process.env.REACT_PUBLIC_API_URL;
 
 const MyPage: React.FC = () => {
   const navigate = useNavigate();
@@ -42,7 +48,7 @@ const MyPage: React.FC = () => {
 
         // ユーザー情報を取得
         const userInfoResponse = await fetch(
-          `http://localhost:3000/user_infos/${user.userId}`,
+          `${backend}user_infos/${user.userId}`,
           {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },
@@ -54,7 +60,7 @@ const MyPage: React.FC = () => {
 
         // 購入履歴を取得
         const purchaseHistoriesResponse = await fetch(
-          `http://localhost:3000/user_purchase_histories?user_id=${userInfoData.user_id}`,
+          `user_purchase_histories?user_id=${userInfoData.user_id}`,
           {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },

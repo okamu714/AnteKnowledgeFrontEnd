@@ -18,6 +18,9 @@ interface Metadata {
   userId: string;
 }
 
+const backend =
+  import.meta.env.VITE_PUBLIC_API_URL || process.env.REACT_PUBLIC_API_URL;
+
 const PurchaseSuccess = () => {
   const [metadata, setMetadata] = useState<Metadata | null>(null);
   const [message, setMessage] = useState<string | null>(null);
@@ -31,7 +34,7 @@ const PurchaseSuccess = () => {
       console.log('Session ID:', sessionId); // デバッグ用
 
       if (sessionId) {
-        fetch(`http://localhost:3000/api/stripe/${sessionId}`)
+        fetch(`${backend}api/stripe/${sessionId}`)
           .then((res) => {
             if (!res.ok) {
               throw new Error(`HTTP error! status: ${res.status}`);
@@ -62,19 +65,16 @@ const PurchaseSuccess = () => {
   useEffect(() => {
     const savePurchaseHistory = async (metadata: Metadata) => {
       try {
-        const response = await fetch(
-          'http://localhost:3000/purchase_histories',
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              user_id: metadata.userId,
-              product_id: metadata.product_id,
-            }),
-          }
-        );
+        const response = await fetch(`${backend}purchase_histories`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            user_id: metadata.userId,
+            product_id: metadata.product_id,
+          }),
+        });
 
         const result = await response.json();
         if (response.ok) {

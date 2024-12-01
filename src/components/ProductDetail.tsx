@@ -7,8 +7,11 @@ import Loading from './Loading';
 import { useAuth } from '../context/AuthContext';
 import { PurchaseHistory } from '../types';
 
-const serviceDomain = import.meta.env.VITE_SERVICE_DOMAIN;
-const apiKey = import.meta.env.VITE_API_KEY;
+const serviceDomain =
+  import.meta.env.VITE_SERVICE_DOMAIN || process.env.REACT_SERVICE_DOMAIN;
+const apiKey = import.meta.env.VITE_API_KEY || process.env.REACT_API_KEY;
+const backend =
+  import.meta.env.VITE_PUBLIC_API_URL || process.env.REACT_PUBLIC_API_URL;
 
 const client = createClient({
   serviceDomain: serviceDomain,
@@ -37,7 +40,7 @@ const ProductDetail = () => {
 
       try {
         const response = await fetch(
-          `http://localhost:3000/user_purchase_histories?user_id=${user.userId}`,
+          `${backend}user_purchase_histories?user_id=${user.userId}`,
           {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },

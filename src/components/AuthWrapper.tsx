@@ -25,6 +25,9 @@ I18n.setLanguage('ja');
 // Props の定義を更新
 type Props = AuthWrapperProps & WithAuthenticatorProps;
 
+const backend =
+  import.meta.env.VITE_PUBLIC_API_URL || process.env.REACT_PUBLIC_API_URL;
+
 const AuthWrapper: React.FC<Props> = () => {
   const navigate = useNavigate();
   const { setUser } = useAuth();
@@ -42,7 +45,7 @@ const AuthWrapper: React.FC<Props> = () => {
       // バックエンドにユーザー情報を送信
       const sendUserInfoToBackend = async () => {
         try {
-          const response = await fetch('http://localhost:3000/user_infos', {
+          const response = await fetch(`${backend}user_infos`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

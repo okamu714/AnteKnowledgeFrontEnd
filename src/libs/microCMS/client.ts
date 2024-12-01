@@ -1,8 +1,8 @@
 import { createClient } from 'microcms-js-sdk';
 
-const serviceDomain = import.meta.env.VITE_SERVICE_DOMAIN;
-// const serviceBlogDomain = import.meta.env.VITE_BLOG_SERVICE_DOMAIN;
-const apiKey = import.meta.env.VITE_API_KEY;
+const serviceDomain =
+  import.meta.env.VITE_SERVICE_DOMAIN || process.env.REACT_SERVICE_DOMAIN;
+const apiKey = import.meta.env.VITE_API_KEY || process.env.REACT_API_KEY;
 
 export const client = createClient({
   serviceDomain: serviceDomain,
