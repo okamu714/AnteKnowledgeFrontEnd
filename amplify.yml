@@ -1,18 +1,12 @@
 version: 1
-backend:
-  phases:
-    build:
-      commands:
-        - amplify pull --appId doc5a2thpoda --envName YOUR_ENV_NAME -y
-        - amplifyPush --simple
 frontend:
   phases:
     preBuild:
       commands:
-        - yarn install
+        - npm install
     build:
       commands:
-        - yarn build
+        - npm run build
   artifacts:
     baseDirectory: build
     files:
