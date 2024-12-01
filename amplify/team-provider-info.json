@@ -10,6 +10,11 @@
       "StackName": "amplify-akfronend-dev-f3864",
       "StackId": "arn:aws:cloudformation:ap-northeast-1:423623824342:stack/amplify-akfronend-dev-f3864/8949b400-afcd-11ef-b870-0e42415ba0f5",
       "AmplifyAppId": "d2l737o8h4bm2m"
+    },
+    "categories": {
+      "auth": {
+        "akfronendc65996d6": {}
+      }
     }
   }
 }
