@@ -2,7 +2,8 @@ import React from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 
 const stripePromise = loadStripe(
-  import.meta.env.VITE_STRIPE_PUBLIC_KEY || process.env.REACT_STRIPE_PUBLIC_KEY
+  import.meta.env.VITE_STRIPE_LIVE_PUBLIC_KEY ||
+    process.env.REACT_STRIPE_PUBLIC_KEY
 );
 const backend =
   import.meta.env.VITE_PUBLIC_API_URL || process.env.REACT_PUBLIC_API_URL;
