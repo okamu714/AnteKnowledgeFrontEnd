@@ -11,9 +11,15 @@ const Footer = () => {
         />
         <Link
           to="/contact"
-          className="flex items-center justify-center text-[12px] text-gray-300 hover:text-blue-500 mb-2"
+          className="flex items-center justify-center text-[12px] text-gray-300 hover:text-blue-500 mb-2  m-auto"
         >
           [質問やお問い合わせがあればこちらよりお願い致します]
+        </Link>
+        <Link
+          to="/termsofservice"
+          className="flex items-center justify-center text-[12px] text-gray-300 hover:text-blue-500 mb-2 w-fit m-auto"
+        >
+          [特定商取引法に基づく表記]
         </Link>
         <p className="text-center text-sm text-gray-300 ">
           Copyright © 2024 AnteKnowledge. All rights reserved.

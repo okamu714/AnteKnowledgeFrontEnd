@@ -20,6 +20,7 @@ import Template from './components/Template';
 import ScrollToTop from './components/ScrollTop';
 import BlogDetail from './components/BlogDetail';
 import Contact from './components/Contact';
+import TermsOfService from './components/TermsOfService';
 
 const App: React.FC = () => {
   return (
@@ -42,6 +43,7 @@ const App: React.FC = () => {
             <Route path="/succes" element={<PurchaseSuccess />} />
             <Route path="/cancel" element={<EBooks />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/termsofservice" element={<TermsOfService />} />
             <Route path="/ebook/:productId" element={<ProductDetail />} />
             <Route path="/blog/:productId" element={<BlogDetail />} />
             {/* 不明なパスはホームにリダイレクト */}

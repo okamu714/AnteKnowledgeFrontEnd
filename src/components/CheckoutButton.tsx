@@ -3,11 +3,9 @@ import { loadStripe } from '@stripe/stripe-js';
 
 const stripePromise = loadStripe(
   import.meta.env.VITE_STRIPE_LIVE_PUBLIC_KEY ||
-    process.env.REACT_STRIPE_PUBLIC_KEY ||
     'pk_live_51QMsOaK9yUy0vysUpihPSVVcBZBYH7U8ucxi9plDrdPYMK1IFTJAE1gXfmZw2WSwhRRJMQ9B6OJFDAeSmBbh2dlc00VrYl3Fvd'
 );
-const backend =
-  import.meta.env.VITE_PUBLIC_API_URL || process.env.REACT_PUBLIC_API_URL;
+const backend = import.meta.env.VITE_PUBLIC_API_URL;
 
 const CheckoutButton: React.FC<{
   product_id: string;
