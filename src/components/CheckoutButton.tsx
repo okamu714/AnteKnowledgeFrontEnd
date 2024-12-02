@@ -3,7 +3,8 @@ import { loadStripe } from '@stripe/stripe-js';
 
 const stripePromise = loadStripe(
   import.meta.env.VITE_STRIPE_LIVE_PUBLIC_KEY ||
-    process.env.REACT_STRIPE_PUBLIC_KEY
+    process.env.REACT_STRIPE_PUBLIC_KEY ||
+    'pk_test_51QMsOaK9yUy0vysUKbnXwqTPQNnneX80rFejx2w01CdzJHx4qEmJ9KQd5opywl3fSYwtXSsKcSoPZdYj274xXB1V00RJQ628zc'
 );
 const backend =
   import.meta.env.VITE_PUBLIC_API_URL || process.env.REACT_PUBLIC_API_URL;
