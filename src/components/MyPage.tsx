@@ -62,7 +62,7 @@ const MyPage: React.FC = () => {
 
         // 購入履歴を取得
         const purchaseHistoriesResponse = await fetch(
-          `user_purchase_histories?user_id=${userInfoData.user_id}`,
+          `${backend}user_purchase_histories?user_id=${userInfoData.user_id}`,
           {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },
