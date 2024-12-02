@@ -38,7 +38,7 @@ const AuthWrapper: React.FC<Props> = () => {
     if (route === 'authenticated' && user) {
       // ユーザー情報をコンテキストに保存
       setUser(user);
-      console.log(user);
+      // console.log(user);
 
       // バックエンドにユーザー情報を送信
       const sendUserInfoToBackend = async () => {
