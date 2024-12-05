@@ -19,7 +19,7 @@ const Footer = () => {
           to="/termsofservice"
           className="flex items-center justify-center text-[12px] text-gray-300 hover:text-blue-500 mb-2 w-fit m-auto"
         >
-          [特定商取引法に基づく表記]
+          [通信販売に関する表示事項]
         </Link>
         <p className="text-center text-sm text-gray-300 ">
           Copyright © 2024 AnteKnowledge. All rights reserved.
