@@ -11,7 +11,7 @@ const TermsOfService: React.FC = () => {
           <div className="text-black">
             <div className="max-w-3xl mx-auto p-6">
               <h1 className="text-3xl font-semibold text-center mb-8">
-                特定商取引法に基づく表記
+                通信販売に関する表示事項
               </h1>
 
               {/* 販売業者の名称 */}
