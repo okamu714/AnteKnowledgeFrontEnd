@@ -39,9 +39,9 @@ const App: React.FC = () => {
             />
             <Route path="/blog" element={<Blog />} />
             <Route path="/ebook" element={<EBooks />} />
-            <Route path="/introCodes" element={<IntroCodes />} />
-            <Route path="/succes" element={<PurchaseSuccess />} />
             <Route path="/cancel" element={<EBooks />} />
+            <Route path="/introCodes" element={<IntroCodes />} />
+            <Route path="/success" element={<PurchaseSuccess />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/termsofservice" element={<TermsOfService />} />
             <Route path="/ebook/:productId" element={<ProductDetail />} />
