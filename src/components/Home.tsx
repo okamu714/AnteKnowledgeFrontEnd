@@ -44,8 +44,8 @@ const Home = () => {
           <div className="w-[1100px] flex justify-center items-center -mt-20 pb-32 border-b-2 border-gray-800 border-b-opacity-10">
             {/* 画像切り替えコンポーネント */}
             <ImageSwitcher
-              frontImage="./../../pic/Logos/オリジナル.png"
-              backImage="./../../pic/Logos/白地に黒の文字.png"
+              frontImage="./../../pic/Logos/original.png"
+              backImage="./../../pic/Logos/whiteBaseBlackFont.png"
             />
             <div className="h-fit w-[900px] p-3 ml-24 font-zen text-gray-900 bg-white bg-opacity-70 rounded shadow-2xl">
               <div className="mb-4 text-center border-x-2 border-black px-2">
