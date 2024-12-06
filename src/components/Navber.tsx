@@ -11,12 +11,12 @@ const Navber = () => {
         <Link to="/" className="group">
           {/* 白に透過背景 */}
           <img
-            src="./../../pic/Logos/White_bgnone.png"
+            src="/pic/Logos/White_bgnone.png"
             className="absolute inset-0 w-auto h-auto ease-in transition duration-100 group-hover:opacity-0 group-hover:scale-110"
           />
           {/* 黒に透過背景 */}
           <img
-            src="./../../pic/Logos/Black_bgnone.png" // アップロードした黒画像のパスに変更
+            src="/pic/Logos/Black_bgnone.png" // アップロードした黒画像のパスに変更
             alt="黒"
             className="absolute inset-0 w-auto h-auto ease-out opacity-0 transition duration-300 group-hover:opacity-100 group-hover:scale-125"
           />

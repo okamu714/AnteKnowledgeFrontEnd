@@ -7,7 +7,7 @@ const Footer = () => {
         {/* 文字を前面に配置 */}
         <img
           className="m-auto max-w-[200px] h-fit mb-3"
-          src="./../../pic/Logos/White_bgnone.png"
+          src="/pic/Logos/White_bgnone.png"
         />
         <Link
           to="/contact"

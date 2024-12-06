@@ -14,7 +14,7 @@ const Home = () => {
         <div className="relative w-screen h-screen bg-neutral-500">
           {/* 背景画像 */}
           <img
-            src="./../pic/couple-5946815_1920.jpg"
+            src="/pic/couple-5946815_1920.jpg"
             className="absolute inset-0 w-full h-full opacity-65"
             alt="背景画像"
           />
@@ -44,8 +44,8 @@ const Home = () => {
           <div className="w-[1100px] flex justify-center items-center -mt-20 pb-32 border-b-2 border-gray-800 border-b-opacity-10">
             {/* 画像切り替えコンポーネント */}
             <ImageSwitcher
-              frontImage="./../../pic/Logos/original.png"
-              backImage="./../../pic/Logos/whiteBaseBlackFont.png"
+              frontImage="/pic/Logos/original.png"
+              backImage="/pic/Logos/whiteBaseBlackFont.png"
             />
             <div className="h-fit w-[900px] p-3 ml-24 font-zen text-gray-900 bg-white bg-opacity-70 rounded shadow-2xl">
               <div className="mb-4 text-center border-x-2 border-black px-2">
@@ -206,7 +206,7 @@ const Home = () => {
           </h1>
           <div className="flex items-center -mt-2 opacity-70 shadow-2xl bg-white bg-opacity-70 rounded p-10 w-[1100px] h-fit m-auto">
             <img
-              src="./../../pic/IMG_216_copy.jpg"
+              src="/pic/IMG_216_copy.jpg"
               className="w-[300px] h-fit rounded-full border-2 border-gray-600 mx-10"
             />
             <div className="text-md text-left tracking-wide leading-8">
