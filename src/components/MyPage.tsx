@@ -31,7 +31,7 @@ const MyPage: React.FC = () => {
   const [products, setProducts] = useState<Books[] | null>(null); // 初期値をnullに設定
   const [loading, setLoading] = useState(true); // 全体のローディング状態を管理
 
-  console.log(purchaseHistories);
+  // console.log(purchaseHistories);
 
   // サインアウトの動き
   const handleSignOut = () => {

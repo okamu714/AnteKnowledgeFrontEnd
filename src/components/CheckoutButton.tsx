@@ -13,7 +13,7 @@ const CheckoutButton: React.FC<{
   price: number;
   userId: string | undefined;
 }> = ({ product_id, product_name, price, userId }) => {
-  console.log(product_id, product_name, price, userId);
+  // console.log(product_id, product_name, price, userId);
 
   const handleCheckout = async () => {
     const stripe = await stripePromise;

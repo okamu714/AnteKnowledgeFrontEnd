@@ -38,7 +38,7 @@ const BlogDetail = () => {
       </div>
     );
   }
-  console.log(blog);
+  // console.log(blog);
 
   // 記事の表示
   return (

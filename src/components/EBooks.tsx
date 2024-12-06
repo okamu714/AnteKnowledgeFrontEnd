@@ -58,7 +58,7 @@ const EBooks: React.FC = () => {
           (productId: PurchaseHistory) => productId.product_id
         );
         setPurchaseProductIds(productIds);
-        console.log(purchaseProductIds);
+        // console.log(purchaseProductIds);
       } catch (error) {
         console.error('Error fetching purchase histories:', error);
       }

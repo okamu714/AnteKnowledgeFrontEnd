@@ -54,17 +54,17 @@ const AuthWrapper: React.FC<Props> = () => {
             }),
           });
 
-          if (response.ok) {
-            console.log(
-              'ユーザー情報を正常に送信しました:',
-              await response.json()
-            );
-          } else {
-            console.error(
-              'ユーザー情報の送信に失敗しました:',
-              await response.json()
-            );
-          }
+          // if (response.ok) {
+          //   console.log(
+          //     'ユーザー情報を正常に送信しました:',
+          //     await response.json()
+          //   );
+          // } else {
+          //   console.error(
+          //     'ユーザー情報の送信に失敗しました:',
+          //     await response.json()
+          //   );
+          // }
         } catch (error) {
           console.error('バックエンドとの通信エラー:', error);
         }

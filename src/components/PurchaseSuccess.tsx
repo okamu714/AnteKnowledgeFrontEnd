@@ -26,7 +26,7 @@ const PurchaseSuccess = () => {
     const timer = setTimeout(() => {
       const params = new URLSearchParams(window.location.search);
       const sessionId = params.get('session_id');
-      console.log('Session ID:', sessionId); // デバッグ用
+      // console.log('Session ID:', sessionId); // デバッグ用
 
       if (sessionId) {
         fetch(`${backend}api/stripe/${sessionId}`)
@@ -47,7 +47,7 @@ const PurchaseSuccess = () => {
             console.error('Error fetching metadata:', err);
             setError('メタデータの取得中にエラーが発生しました。');
           });
-        console.log(metadata);
+        // console.log(metadata);
       } else {
         setError('セッションIDが見つかりませんでした。');
       }

@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
       )
       .then(
         (response) => {
-          console.log('メール送信成功:', response.text);
+          // console.log('メール送信成功:', response.text);
           setSuccess(true);
           setName('');
           setEmail('');

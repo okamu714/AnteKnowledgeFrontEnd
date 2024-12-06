@@ -9,6 +9,7 @@ type BlogProps = {
 
 const BlogCard: React.FC<BlogProps> = ({ blog }) => {
   // const { isAuthenticated, user, setUser } = useAuth();
+  // console.log(blog);
 
   return (
     <>
