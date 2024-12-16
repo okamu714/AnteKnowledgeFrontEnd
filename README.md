@@ -1,52 +1,152 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<body>
+  <h1>AnteKnowledge-アンテナレッジ-　フロントエンド</h1>
+  
+  <blockquote>
+    <strong>注意:</strong> リポジトリ内のコードをご利用いただく際に発生したトラブル等については、
+    一切責任を負いかねますのでご了承ください。
+  </blockquote>
+  <blockquote>
+    <strong>お知らせ:</strong> 電子記事販売や就活体験記ブログを投稿するWebアプリケーションを作成いたしました。こちらも合わせてご覧いただけると幸いです。<br/>
+    アプリURL:https://authcomp.d1awsv4v0mkqab.amplifyapp.com/<br/>
+    Github:https://github.com/okamu714/AnteKnowledgeFrontEnd　(フロントエンド) https://github.com/okamu714/AnteknowledgeBackEnd (バックエンド)
+  </blockquote>
 
-Currently, two official plugins are available:
+  <h2>目次</h2>
+  <ol>
+    <li><a href="#introduction">はじめに</a></li>
+    <li><a href="#apps">アプリ概要</a></li>
+    <li><a href="#technologies">使用技術まとめ</a></li>
+    <li><a href="#improvements">今後の改善点</a></li>
+  </ol>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  <h2 id="introduction">はじめに</h2>
+  <p>
+    ・本リポジトリはokamu714(GitHubName)が作成した、電子記事販売やブログを投稿するWebアプリケーションのフロントエンド側のコードです。<br/>
+    ・バックエンドに関してはこちらのURLから御覧ください。：　https://github.com/okamu714/AnteknowledgeBackEnd<br/>
+  </p>
 
-## Expanding the ESLint configuration
+  <h2 id="apps">アプリ概要</h2>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+  <h3>AnteKnowledge-アンテナレッジ-</h3>
+  <ul>
+    <li><strong>概要:</strong> 電子記事販売やブログの投稿を行えるWebアプリケーションです。</li><br/>
+    <li><strong>コンセプト:</strong></li><br/>
+    <img width="738" alt="スクリーンショット 2024-12-16 10 24 40" src="https://github.com/user-attachments/assets/02abce4d-aa00-43da-9339-ada55d8a077e" />
+    <li><strong>機能:</strong>
+      <ul>
+        <li>stripe checkoutを用いた決済機能</li>
+        <li>microCMSを用いた電子記事、ブログ投稿機能</li>
+        <li>AWS RDSを用いたユーザーデータ(メールアドレスや購入履歴)保存機能</li>
+        <li>AWS Amplifyを用いたユーザー認証機能</li>
+      </ul>
+    </li><br/>
+    <li><strong>サイトURL:</strong>
+      <a href="https://youtu.be/SGeeLyyds3M"> デモを見る(YouTubeへのリンクです)</a>
+      <br/>
+    </li><br/>
+    <li><strong>工夫点 / 挑戦したこと:</strong><br/>
+      <ul>
+        <li>初めてのチーム開発でGitとGitHubの使用に挑戦</li>
+        <li>Djangoで用意したデータベースとの連携に挑戦</li>
+        <li>細かいアニメーションを入れたり、上品さを感じるトップ画像をAIで生成することでUI/UXの向上を図った</li>
+      </ul>
+    </li><br/>
+    <li><strong>使用技術:</strong> HTML, CSS, JavaScript, Django(環境構成には不参加)</li>
+  </ul><br/>
 
-- Configure the top-level `parserOptions` property like this:
+  <h3>2. HouseHold-app</h3>
+  <ul>
+    <li><strong>概要:</strong> 家計簿管理アプリ。月ごとの支出と収入を可視化し、家計の見直しをサポート。</li><br/>
+    <li><strong>機能:</strong>
+      <ul>
+        <li>カレンダーへの支出・収入の記録。</li>
+        <li>円グラフと棒グラフ表示による月ごとの支出可視化。</li>
+        <li>Firestore Firebaseでのデータ保存</li>
+      </ul>
+    </li><br/>
+    <li><strong>デモ動画:</strong>
+      <a href="https://youtu.be/U_rdJHdrvWw">デモを見る(YouTubeへのリンクです)</a>
+      <br/>
+    </li><br/>
+    <li><strong>工夫点 / 挑戦したこと:</strong><br/>
+      <ul>
+        <li>firebaseを用いたデータベース連携に挑戦</li>
+        <li>MUIを用いてシンプルで見やすいデザインに</li>
+        <li>スマホ決済といった現在主流の決済手段を追加</li>
+      </ul>
+    </li><br/>
+    <li><strong>使用技術:</strong> React, MUI, TypeScript, Firebase(Firestore database)</li>
+    <li><strong>参考:</strong>
+      <br/>【『React』×『TypeScrip』入門　】家計簿アプリ作成でReactとTypeScriptの開発方法を学ぼう 
+      <br/>URL:https://www.udemy.com/share/10avSW3@kF65KUoL-L4-vMUdLX71riD2wajEqBL6rCXm-ikb6NrMTJhRrtlzxMAUnA4xqmKYkg==/</li>
+  </ul><br/>
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+  <h3>3. Shift-scheduler</h3>
+  <ul>
+    <li><strong>概要:</strong><br/> 
+      <ul>
+        <li>シフト作成補助兼管理アプリ。</li>
+        <li>シフト作成の際に、紙の希望出勤表からエクセルに手入力していた作業を、Web上でいくつかの情報を打ち込むことで、シフト表のフォーマット通りにテーブル表示し、最短一回の貼り付け作業で入力を終わらせることができるようにした</li>
+      </ul>
+    </li><br/>
+    <li><strong>機能:</strong>
+      <ul>
+        <li>一ヶ月分の従業員シフトデータの保存。</li>
+        <li>データをもとにシフト作成に使うエクセルフォーマット通りにテーブルを表示</li>
+        <li>時間帯あたりの出勤人数が足りていない日は赤く強調表示</li>
+      </ul>
+    </li><br/>
+    <li><strong>デモ動画:</strong>
+      <a href="https://youtu.be/aqfUrJ-XeoI">デモを見る(YouTubeへのリンクです)</a>
+      <br/>
+    </li><br/>
+    <li><strong>工夫点 / 挑戦したこと:</strong><br/>
+      <ul>
+        <li>変更や取得がしやすいデータ階層構造の設計</li>
+        <li>制作者と管理権限を持ったアカウントしかシフトデータの参照と編集ができない仕様づくり</li>
+        <li>6時間以上の労働時間の場合、休憩時間が加えられていたり、出勤開始時刻を15分起きにしたりといったアルバイト先に合わせた細かい調整</li>
+      </ul>
+    </li><br/>
+    <li><strong>使用技術:</strong> React,  MUI, TypeScript, Firebase(Authentication, Firestore database) </li>
+  </ul>
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+  <h2 id="technologies">使用技術まとめ</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>分類</th>
+        <th>使用技術</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>フロントエンド</td>
+        <td>HTML, CSS, JavaScript, TypeScript(5.5.3), React(18.3.1), MUI(6.1.0)</td>
+      </tr>
+      <tr>
+        <td>バックエンド</td>
+        <td>Django(私自身は未使用)</td>
+      </tr>
+      <tr>
+        <td>データベース</td>
+        <td>Firebase(10.13.1: Authentication, firestore database)</td>
+      </tr>
+    </tbody>
+  </table><br/>
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+  <h2 id="improvements">今後の改善点</h2>
+  <ul>
+    <li><strong>Frogs:</strong> ユーザーのカエル化体験の投稿機能の追加。</li>
+    <li><strong>HouseHold-app:</strong> ユーザー認証機能の追加</li>
+    <li><strong>Shift-scheduler:</strong> テーブル画面からのデータ編集機能追加。</li>
+  </ul><br/>
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-
-# AnteKnowledge
+  <h2 id="improvements">さいごに</h2>
+  最後までご覧いただきありがとうございました。<br/>
+  どのアプリもデプロイまでには至っていない拙い作品ばかりですが、振り返ってみると意外と思い出深かったりします。<br/>
+  このアプリたちを糧にして、今後も成長を続けていければ良いなと考えております。<br/>
+  改めてここまでご覧いただきありがとうございました！
+  
+</body>
+</html>
