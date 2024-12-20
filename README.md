@@ -33,7 +33,12 @@
         <li>stripe checkoutを用いた決済機能</li>
         <li>microCMSを用いた電子記事、ブログ投稿機能</li>
         <li>AWS RDSを用いたユーザーデータ(メールアドレスや購入履歴)保存機能</li>
-        <li>AWS Amplifyを用いたユーザー認証機能</li>
+        <li>AWS Amplifyを用いたユーザー認証機能:以下のデモ用メールアドレスとパスワードをご利用ください。
+          <ul>
+            <li>メールアドレス:tdemo073@gmail.com</li>
+            <li>パスワード:Demo</li>
+          </ul>
+        </li>
       </ul>
     </li><br/>
     <li><strong>サイトURL:</strong>https://authcomp.d1awsv4v0mkqab.amplifyapp.com/
